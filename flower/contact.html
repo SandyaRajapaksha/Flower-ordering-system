@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+        <link rel="stylesheet" href="contact.css">
+    
+    
+
+    </head>
+    <body>
+
+    
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+     
+                 <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    
+                </a>
+                
+
+                
+       
+       
+       <div class="form-container " >
+        <section class="contact" id="contact">
+      <div class="row">
+        <div class="col-md-6 p-5 bg-primary text-white">
+         
+          <h1>Hi there!</h1>
+          <h4>
+            Welcome Fresh Flowers.If you have any Question please contact us.
+          </h4>
+        </div>
+
+
+        
+        <div class="col-md-6 border-left py-3">
+          
+
+          <h2>Contact form</h2>
+          
+          <div class="form-group" id="form-group">
+            <form action="contact.php" method="post">
+            <h5 for="name">Name</h5>
+            <input type="text" class="form-control" id="name"  name="name" placeholder="Enter name" />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input type="email" class="form-control" id="email"   name="email" placeholder="Enter email"/>
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"   name="message"  placeholder="Enter Message"></textarea>
+          </div>
+        
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+          
+        </div>
+
+
+        
+      </div>
+    </div>
+  
+</section>
+       
+
+</form>
+    </body>
+</html>

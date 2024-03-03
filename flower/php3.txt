@@ -1,0 +1,47 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $product = $_POST["product"];
+    $quantity = $_POST["quantity"];
+
+    // You can process the order here (e.g., send an email or store in a database)
+    // Example: Send an email with order details
+    $to = "your_email@example.com"; // Replace with your email address
+    $subject = "New Order for $product";
+    $message = "Name: $name\nEmail: $email\nProduct: $product\nQuantity: $quantity";
+    mail($to, $subject, $message);
+
+    // Confirmation message
+    echo "Thank you for your order. We will contact you soon.";
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+</head>
+<body>
+    <h2>Order Form</h2>
+    <form method="post" action="">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label for="product">Product:</label>
+        <select name="product">
+            <option value="Product A">Product A</option>
+            <option value="Product B">Product B</option>
+            <option value="Product C">Product C</option>
+        </select><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required><br><br>
+
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
